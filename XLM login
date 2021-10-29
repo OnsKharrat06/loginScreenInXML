@@ -1,3 +1,7 @@
+XmlDocument doc = new XmlDocument();
+            doc.Load("C:/Users/Asus/source/repos/Working with XML/Accounts.xml");
+            XmlNodeList list = doc.SelectNodes(".//accountInformationClass");
+            bool userFound = false; 
 foreach (XmlNode user in list)
             {
                 if ((user["Name"].InnerText == usernameTextBox.Text) && (user["Password"].InnerText == passwordTextBox.Text))
