@@ -1,0 +1,17 @@
+foreach (XmlNode user in list)
+            {
+                if ((user["Name"].InnerText == usernameTextBox.Text) && (user["Password"].InnerText == passwordTextBox.Text))
+                {
+                    userFound = true; 
+                    break; 
+                }
+                
+            }
+            if (userFound ==true)
+            {
+                MessageBox.Show("Right", "Right", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Please Create an Account", "Wrong", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
